@@ -7,7 +7,7 @@ This is the project home for the FPGA implimentation of AES128 Spring 2013 EE4xx
 
 FOLDER STRUCTURE
 
--lib--- root resource location for AES128 encryption/decryption 
+-src--- root resource location for AES128 encryption/decryption 
        |
 	inversecipher -  holds any functions related to decription
        |
