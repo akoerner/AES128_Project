@@ -16,7 +16,7 @@ FUNCTION Cipher(
 		type input IS array (7 downto 0, 7 downto 0) of std_logic,
                 type output IS array (7 downto 0, 7 downto 0) of std_logic,
                 type w  IS array (7 downto 0, 1280 downto 0) of std_logic
-                ) return std_logic_vector
+                ) return std_logic_vector is
 
 END Cipher_pkg;
 
@@ -27,7 +27,7 @@ PACKAGE body Cipher_pkg IS
 			type input BYTE IS array (7 downto 0, 7 downto 0) of std_logic,
 			type output BYTE IS array (7 downto 0, 7 downto 0) of std_logic, 
 			type w BYTE IS array (7 downto 0, 1280 downto 0) of std_logic--likely wrong size 
-		) return std_logic_vector
+		) return std_logic_vector is
 
 		variable state BYTE IS array (7 downto 0, 7 downto 0) of std_logic;
 
