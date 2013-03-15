@@ -3,14 +3,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity sbox_rom is
+entity SBOX_ROM is
 port (
 	   ADDRESS :in std_logic_vector(7 downto 0); 
 	   DATA :out std_logic_vector(7 downto 0) 
 	  );
-end sbox_rom;
+end SBOX_ROM;
 
-architecture Behavioral of sbox_rom is
+architecture Behavioral of SBOX_ROM is
  subtype ROM_WORD is STD_LOGIC_VECTOR (7 downto 0);
 
      type ROM_TABLE is array (0 to 255) of ROM_WORD;
