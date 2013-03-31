@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+	<link rel="stylesheet" href="css/jq.css">
+	<script src="js/jquery-1.8.3.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script type='text/javascript' src="js/knockout-2.1.0.js"></script>
+	<script src="js/knockout.mapping-latest.js" type="text/javascript"></script>
+	<script type='text/javascript' src="js/ko/shared/senseme_ajax.js"></script>
+	<script typt='text/javascript' src="js/ko/index/models.js"></script>
+	<script typt='text/javascript' src="js/ko/koinit.js"></script>
+
+	
+	<body>
+		<div class='commander' id='commander'> 
+			<h2>POIs</h2>
+	         <table>
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						</tr>
+						</thead>
+						<tbody data-bind="foreach: poiArray">
+						
+						
+						
+							<tbody data-bind="foreach: phones">
+                                                        <th>
+                                                                When To Notify<br />
+                                                                M T W Tu F S Su
+                                                        </th>
+                                                        <th>Notification Time Range</th>
+                                                        <th>Phone number</th>
+                                                        <th>Notifications Enabled</th>
+                                                        <th></th>
+                                                        
+                                                                <tr>
+                                                                        <td>
+                                                                                        <input type="checkbox" class="inlinecheckbox" data-bind='checked: monday'/>
+                                                                                        <input type="checkbox" class="inlinecheckbox" data-bind='checked: tuesday'/>
+                                                                                        <input type="checkbox" class="inlinecheckbox" data-bind='checked: wednesday'/>
+                                                                                        <input type="checkbox" class="inlinecheckbox" data-bind='checked: thursday'/>
+                                                                                        <input type="checkbox" class="inlinecheckbox" data-bind='checked: friday'/>
+                                                                                        <input type="checkbox" class="inlinecheckbox" data-bind='checked: saturday'/>
+                                                                                        <input type="checkbox" class="inlinecheckbox" data-bind='checked: sunday'/>
+                                                                                        
+
+                                                                        </td>
+                                                                        <td>
+                                                                                <select data-bind='value: start'>
+                                                                                        <option value="00">00</option>
+                                                                                        <option value="01">01</option>
+                                                                                        <option value="02">02</option>
+                                                                                        <option value="03">03</option>
+                                                                                        <option value="04">04</option>
+                                                                                        <option value="05">05</option>
+                                                                                        <option value="06">06</option>
+                                                                                        <option value="07">07</option>
+                                                                                        <option value="08">08</option>
+                                                                                        <option value="09">09</option>
+                                                                                        <option value="10">10</option>
+                                                                                        <option value="11">11</option>
+                                                                                        <option value="12">12</option>
+                                                                                        <option value="13">13</option>
+                                                                                        <option value="14">14</option>
+                                                                                        <option value="15">15</option>
+                                                                                        <option value="16">16</option>
+                                                                                        <option value="17">17</option>
+                                                                                        <option value="18">18</option>
+                                                                                        <option value="19">19</option>
+                                                                                        <option value="20">20</option>
+                                                                                        <option value="21">21</option>
+                                                                                        <option value="21">22</option>
+                                                                                        <option value="21">23</option>
+                                                                                </select>
+                                                                                
+                                                                                to
+                                                                                
+                                                                                <select data-bind='value: end'>
+                                                                                        <option value="00">00</option>
+                                                                                        <option value="01">01</option>
+                                                                                        <option value="02">02</option>
+                                                                                        <option value="03">03</option>
+                                                                                        <option value="04">04</option>
+                                                                                        <option value="05">05</option>
+                                                                                        <option value="06">06</option>
+                                                                                        <option value="07">07</option>
+                                                                                        <option value="08">08</option>
+                                                                                        <option value="09">09</option>
+                                                                                        <option value="10">10</option>
+                                                                                        <option value="11">11</option>
+                                                                                        <option value="12">12</option>
+                                                                                        <option value="13">13</option>
+                                                                                        <option value="14">14</option>
+                                                                                        <option value="15">15</option>
+                                                                                        <option value="16">16</option>
+                                                                                        <option value="17">17</option>
+                                                                                        <option value="18">18</option>
+                                                                                        <option value="19">19</option>
+                                                                                        <option value="20">20</option>
+                                                                                        <option value="21">21</option>
+                                                                                        <option value="21">22</option>
+                                                                                        <option value="21">23</option>
+                                                                                </select>
+                                                                        </td>
+                                                                        <td><input data-bind='value: number' class="textbox30"/></td>
+                                                                        <td ALIGN="center"><input type="checkbox" data-bind="checked: enabled" /></td>
+                                                                        <td><a href='#' data-bind='click: $root.removePhone'>Delete</a></td>
+                                                                </tr>
+                                                                        <hr />
+                                                        </tbody>
+								            
+							
+						</tbody>
+			</table>								    
+	    </div>
+	</body>
+</html>

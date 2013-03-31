@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity ShiftRows is
 	Port (
 			STATE_IN : in  STD_LOGIC_VECTOR (127 downto 0);
-			State_OUT : out  STD_LOGIC_VECTOR (127 downto 0);
+			STATE_OUT : out  STD_LOGIC_VECTOR (127 downto 0);
 			CLOCK : in  STD_LOGIC
 		 );
 end ShiftRows;
@@ -14,7 +14,7 @@ architecture Behavioral of ShiftRows is
 begin
 SHIFT_ROWS : PROCESS(CLOCK)
 	begin
-		IF (CLOCK'event AND CLOCK ='1') then
+		IF (CLOCK'event AND CLOCK ='1') THEN
 			STATE_OUT <= STATE_IN(127 downto 120) &
 							STATE_IN(87 downto 80)   &
 							STATE_IN(47 downto 40)   &
